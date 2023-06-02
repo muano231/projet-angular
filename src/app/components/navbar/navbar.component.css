@@ -1,0 +1,45 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #15151e;
+}
+
+img {
+    height: 40px;
+}
+
+.signin-button, .logout-button {
+    background-color: #fff;
+    color: #15151e;
+}
+
+.signin-button:hover {
+    background-color: #f1f1f1;
+    color: #15151e;
+}
+
+.register-button {
+    background-color: #15151e;
+    color: #fff;
+}
+
+.register-button:hover {
+    background-color: #2c2c2c;
+    color: #fff;
+}

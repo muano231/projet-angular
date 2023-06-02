@@ -1,0 +1,18 @@
+<div class="content format connexion">
+    <h1 appTranslate translation="register"></h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="input-label">
+            <label for="username" appTranslate translation="username"></label>
+            <input type="text" class="input" formControlName="username" required/>
+        </div>
+        <div class="input-label">
+            <label for="password" appTranslate translation="password"></label>
+            <input type="password" class="input" formControlName="password" required/>
+        </div>
+        <div class="input-label">
+            <label for="password" appTranslate translation="password-confirm"></label>
+            <input type="password" class="input" formControlName="confirmPassword" required/>
+        </div>
+        <button class="button" appTranslate translation="register-button" [disabled]="registerForm.invalid"></button>
+    </form>
+</div>

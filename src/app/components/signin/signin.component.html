@@ -1,0 +1,14 @@
+<div class="content format connexion">
+    <h1 appTranslate translation="signin"></h1>
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+        <div class="input-label">
+            <label for="username" appTranslate translation="username"></label>
+            <input type="text" class="input" formControlName="username" required/>
+        </div>
+        <div class="input-label">
+            <label for="password" appTranslate translation="password"></label>
+            <input type="password" class="input" formControlName="password" required/>
+        </div>
+        <button class="button" appTranslate translation="signin-button" [disabled]="authForm.invalid"></button>
+    </form>
+</div>

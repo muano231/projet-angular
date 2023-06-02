@@ -1,0 +1,27 @@
+<div class="header-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)),url(../../../assets/img/RacesBackground.jpg); background-position: 1% 80%;">
+    <h1 appTranslate translation="races"></h1>
+</div>
+<div class="content format">
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th></th>
+                <th appTranslate translation="racename"></th>
+                <th appTranslate translation="date"></th>
+                <th appTranslate translation="time"></th>
+                <th appTranslate translation="sprint"></th>
+                <th appTranslate translation="circuit"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let schedule of schedulesList">
+                <td>{{ schedule.$.round }}</td>
+                <td>{{ schedule.RaceName }}</td>
+                <td>{{ schedule.Date }}</td>
+                <td>{{ schedule.Time }}</td>
+                <td>{{ schedule.Sprint ? schedule.Sprint[0].Date : '-' }}</td>
+                <td>{{ schedule.Circuit[0].CircuitName }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

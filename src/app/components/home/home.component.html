@@ -1,0 +1,18 @@
+<div class="header-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(../../../assets/img/homeBackground.jpg); background-position: 1% 40%;">
+    <h1 appTranslate translation="home"></h1>
+</div>
+<div class="content format next-races-list">
+    <!-- affichage des prochains grand prix -->
+    <div class="race-card" *ngFor="let race of nextRaces; let i = index">
+        <div style="flex-basis: 50%; text-align: center;">
+            <h2>{{ race.RaceName }} {{ currentYear }}</h2>
+            <p>{{ race.FirstPractice[0].Date | date: 'dd' }} - {{ race.Date | date: 'dd MMM' }}</p>
+            <!-- envoi sur la page de votes du grand prix (seulement posible sur le prochain gp) -->
+            <button *ngIf="i == 0" class="button votes-button" [routerLink]="['/polls/',race.$.round]" appTranslate translation="vote"></button>
+        </div>
+        <div style="flex-basis: 50%;">
+            <!-- image du tracé selon l'id du circuit -->
+            <img class="circuit-img" [src]="circuitImgUrl[race.Circuit[0].$.circuitId]" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+h3 {
+    text-decoration: underline;
+}
+
+.link {
+    color: #fff;
+}
+
+.link:link {
+    color: #8b8b8b;
+    text-decoration: underline #8b8b8b;
+}
+
+.link:hover {
+    color: #fff;
+    text-decoration: underline #E10600;
+}

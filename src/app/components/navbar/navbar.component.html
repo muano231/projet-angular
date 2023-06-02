@@ -1,0 +1,31 @@
+<div>
+    <ul>
+        <img class="logo" src="../../../assets/img/f1_logo.svg" alt="f1 logo" (click)="home()" />
+        <li routerLinkActive="active">
+            <a routerLink="/" appTranslate translation="home"></a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/polls" appTranslate translation="polls"></a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/drivers" appTranslate translation="drivers"></a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/constructors" appTranslate translation="constructors"></a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/races" appTranslate translation="races"></a>
+        </li>
+        <!-- boutons de connexion et création de compte seulement si déconnecté -->
+        <li routerLinkActive="active" *ngIf="!isAuth()">
+            <button class="button signin-button" [routerLink]="'/signin'" appTranslate translation="login"></button>
+        </li>
+        <li routerLinkActive="active" *ngIf="!isAuth()">
+            <button class="button register-button" [routerLink]="'/register'" appTranslate translation="register"></button>
+        </li>
+        <!-- boutons de déconnexion seulement si connecté -->
+        <li routerLinkActive="active" *ngIf="isAuth()">
+            <button class="button logout-button" appTranslate translation="logout" (click)="logout()"></button>
+        </li>
+    </ul>
+</div>

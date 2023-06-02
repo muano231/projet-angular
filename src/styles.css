@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+html *
+{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: .2px;
+    left: 0;
+}
+
+.navbar {
+    background-color: #E10600;
+    padding: 5px;
+    height: 72px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0px 1px 15px;
+}
+
+.format * {
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content {
+    margin-bottom: 82px;
+}
+
+.footer {
+    background-color: #15151e;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    clear: left;
+    padding: 5px;
+    width: calc(100% + 6px);
+    height: 150px;
+    left: -8px;
+    bottom: -8px;
+}
+
+.button {
+    padding: 6px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button:hover, .logo:hover {
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-left: auto;
+    border: solid 1px #15151e;
+    border-radius: 20px 20px 0px 0px;
+    background: #15151e;
+}
+
+table th {
+    padding: 1%;
+    color: #fff;
+}
+
+table td {
+    text-align: center;
+    padding: .5%;
+}
+
+table tbody tr:nth-child(even) {
+    background: #d4d4d4;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.header-image {
+    padding: 8%;
+    width: calc(84% + 16px);
+    margin-top: 82px;
+    background: #15151e;
+    text-align: center;
+    left: -8px;
+    color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.header-image > h1 {
+    font-size: 40px;
+}
+
+.connexion {
+    margin-top: 82px;
+    padding: 50px;
+    text-align: center;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    margin: 75px;
+}
+
+.input-label label {
+    margin: 5px;
+    font-size: x-large;
+}
+
+.input {
+    width: 300px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+}

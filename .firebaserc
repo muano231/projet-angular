@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-project-332db": {
+      "hosting": {
+        "projet-angular": [
+          "angular-project-332db"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-project-332db"
+  }
+}
